@@ -1,6 +1,6 @@
 class MinStack {
 private:
-   stack<int> oristk,minstk;
+   stack<int> ori_stk,min_stk;
 public:
     MinStack() {
        
@@ -8,22 +8,22 @@ public:
     }
     
     void push(int val) {
-       oristk.push(val);
-        if ( minstk.empty() || val <= minstk.top() )
+       ori_stk.push(val);
+        if ( min_stk.empty() || val <= min_stk.top() )
             s2.push(val);
     }
     
     void pop() {
-        if (minstk.top() >= oristk.top())
-            minstk.pop();
-        oristk.pop();
+        if (min_stk.top() >= ori_stk.top())
+            min_stk.pop();
+        ori_stk.pop();
     }
     
     int top() {
-        return oristk.top();
+        return ori_stk.top();
     }
     
     int getMin(){
-        return minstk.top();
+        return min_stk.top();
     }
 };
