@@ -29,9 +29,6 @@ public:
                         }
                     }  
                 }
-                if(para.empty())
-                   return true;
-                else
-                   return false;
+                return(para.empty())
             }
 };
