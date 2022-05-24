@@ -24,7 +24,7 @@ public:
                                 para.pop();
                             }
                             else
-                              break;
+                              return false;
                          }
                     }  
                 }
